@@ -1,0 +1,30 @@
+# Downloaded lab archives and extracted images
+DockerLabs/
+*.zip
+*.zip.part
+*.tar
+
+# Local state
+.dockerlabs-done
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+*~
+*.swp
+
+# Temporary/debug output
+*.tmp
+*.log
+
+# Browser session credentials - NEVER commit these
+.cookie
+.cookie-*
+*.cookie
+cookies.txt
+csrf.txt
+.env
+.env.*
+config/cookie
+config/csrf

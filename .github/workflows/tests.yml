@@ -1,0 +1,20 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  bash-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl perl libhtml-parser-perl file unzip
+      - name: Check Bash syntax
+        run: bash -n dockerlabctl.sh
+      - name: Run tests
+        run: bash tests/tests.sh
